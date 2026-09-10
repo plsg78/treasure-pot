@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import '../lib/main.dart';
+import 'package:treasure_pot/main.dart';
 
 void main() {
   group('vehicleForStep', () {
@@ -22,6 +22,15 @@ void main() {
       expect(vehicleForStep(16, 20), '🚙');
       expect(vehicleForStep(17, 20), '✈️');
       expect(vehicleForStep(20, 20), '✈️');
+    });
+  });
+
+  group('progressPercent', () {
+    test('returns a percentage between 0 and 100', () {
+      expect(progressPercent(0, 20), 0);
+      expect(progressPercent(10, 20), 50);
+      expect(progressPercent(20, 20), 100);
+      expect(progressPercent(25, 20), 100);
     });
   });
 }
