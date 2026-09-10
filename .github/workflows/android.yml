@@ -20,7 +20,9 @@ jobs:
           cache: true
 
       - name: Generate Android project files
-        run: flutter create --platforms=android --project-name treasure_pot .
+        run: |
+          flutter create --platforms=android --project-name treasure_pot .
+          rm -f test/widget_test.dart
 
       - name: Get dependencies
         run: flutter pub get
