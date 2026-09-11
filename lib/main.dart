@@ -443,12 +443,12 @@ class _TreasureDialogState extends State<TreasureDialog> {
       alignment: Alignment.center,
       children: [
         const AlertDialog(
-          title: const Text(
+          title: Text(
             '🎉 Trésor !',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.w900),
           ),
-          content: const Column(
+          content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text('🧰', style: TextStyle(fontSize: 92)),
