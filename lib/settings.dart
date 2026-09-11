@@ -17,8 +17,19 @@ class _TreasureSettingsPageState extends State<TreasureSettingsPage> {
   }
   Future<void> _change(bool pee, int delta) async {
     final value = (pee ? _pees : _poops) + delta;
-    if (value < 1) return;
-    setState(() { if (pee) _pees = value; else _poops = value; });
+
+    if (value < 1) {
+      return;
+    }
+
+    setState(() {
+      if (pee) {
+        _pees = value;
+      } else {
+        _poops = value;
+      }
+    });
+
     final p = await SharedPreferences.getInstance();
     await p.setInt(pee ? 'pee_target' : 'poop_target', value);
   }
