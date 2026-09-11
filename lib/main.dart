@@ -442,7 +442,7 @@ class _TreasureDialogState extends State<TreasureDialog> {
     return Stack(
       alignment: Alignment.center,
       children: [
-        AlertDialog(
+        const AlertDialog(
           title: const Text(
             '🎉 Trésor !',
             textAlign: TextAlign.center,
